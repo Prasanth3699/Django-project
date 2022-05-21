@@ -1,0 +1,45 @@
+<html>
+<head>
+</head>
+<body>
+    {% block navbar %}
+    <div>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <div class="container-fluid">
+                <a href="#" class="navbar-brand">GTEC</a>
+                <!-- NAVBAR TOGGLE BUTTON -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mynavbar">
+                    <ul class="navbar-nav m-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'studentlogin_page' %}" class="nav-link active">STUDENT LOGIN</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'stafflogin_page' %}" class="nav-link active">STAFF LOGIN</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active">RESULT</a>
+                        </li>
+                    </ul>
+                    <!-- LOGIN ICON -->
+                <div class="nav-tabs">
+                    {% if request.user.is_authenticated %}
+                        <a href="{% url 'logout' %}">Logout</a>
+                    {% else %} 
+                        <a href="{% url 'Admin_login_page' %}" class="nav-link ">Admin LOGIN</a>
+                    {% endif %}
+                </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    {% endblock navbar %}
+
+
+</body>
+</html>

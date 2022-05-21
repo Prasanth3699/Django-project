@@ -1,0 +1,28 @@
+{% extends 'examapp/base.html' %}
+{% load static %}
+<html>
+    <head>
+        {% block title %} 
+        <title>Admin Home</title> 
+        {% endblock title %}
+    </head>
+
+<body>
+    {% block content %}
+    <h1>{{request.user.username}}</h1>
+    {{staff}}
+
+    <div>
+        <a href="{% url 'admin_staff_view' %}" class= "btn btn-warning">view staffs</a>
+    </div>
+
+    <div>
+        <a href="{% url 'admin_student_view' %}" class= "btn btn-info">view student</a>
+    </div>
+
+
+    {% endblock content %}
+
+   
+</body>
+</html>

@@ -1,0 +1,49 @@
+{% extends 'examapp/base.html' %}
+<head>
+    {% block title %}
+    <title>Home</title>
+    {% endblock title %}
+</head>
+<body>
+    {% block content %}
+    <div class="container mt-5">
+        {% comment %} STUDENT LOGIN FIELD {% endcomment %}
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <div class="text-center text-white bg-success">
+                    <h2>STUDENT LOGIN</h2>
+                </div>
+                <form action="" method="post">
+                    {% csrf_token %}
+                </form>
+            </div>
+            {% comment %} STAFF LOGIN FIELD {% endcomment %}
+            <div class="col-sm-12 col-md-6">
+                <div class="text-center text-white bg-warning">
+                    <h2>STAFF LOGIN</h2>
+                    
+                </div>
+                <div>
+                    {% comment %} <a href="{% url '' %}" class="btn btn-success">staff login</a> {% endcomment %}
+                </div>
+                <a href="signup_admin" class="btn btn-success">Admin signin</a>
+                <a href="signup_staff" class="btn btn-info">staff signin</a>
+                <a href="signup_student" class="btn btn-warning">student signin</a>
+
+            </div>
+        </div>
+
+
+        <div>
+            <h1>
+                click here to start your exam
+            </h1>
+
+
+
+
+
+        </div>
+    </div>
+    {% endblock content %}
+</body>
