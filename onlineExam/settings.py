@@ -27,9 +27,9 @@ STATIC_DIR = os.path.join(BASE_DIR2, 'static')
 SECRET_KEY = 'django-insecure-wichmd^&n@x6me$(pu-y&#c*9%z%y!jg(qafz%5_#i(g1nte3f'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['online-exam-management.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
