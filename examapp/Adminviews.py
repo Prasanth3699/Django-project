@@ -2,7 +2,6 @@ from logging.config import valid_ident
 from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
 from django.shortcuts import render,redirect
 from django.urls import reverse
-from matplotlib.pyplot import get
 from .models import Admin, Staff,Student, User,question_paper
 import random
 from django.contrib.auth import authenticate, login, logout
